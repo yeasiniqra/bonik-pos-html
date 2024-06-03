@@ -159,10 +159,10 @@ a:hover{
    text-align: center;
 }
 p {
-	color: #fff;
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 16px;
+   color: #fff;
 }
 .hide-scroll{
    overflow: hidden;
@@ -194,7 +194,6 @@ p {
 .section-padding{
    padding: 80px 0px;
 }
-
 
 .section-title span {
 	color: var(--primary-text-color);
@@ -238,6 +237,10 @@ h3 {
    grid-template-columns: repeat(2, 1fr);
    gap: 30px;
    align-items: center;
+}
+
+.pt-40{
+   padding-top: 40px;
 }
 
 /************ Header Area Css *************/
@@ -352,6 +355,14 @@ h3 {
    background: #fff;
    color: var(--primary-text-color);
 }
+.header-area.sticky-menu .main-menu > ul > li:last-child:hover a{
+   background: var(--primary-text-color);
+   color: #fff;
+}
+.header-area.sticky-menu .main-menu > ul > li:last-child a{
+   color: #fff;
+}
+
 .button-group {
 	padding-top: 30px;
 }
@@ -1039,7 +1050,90 @@ h3 {
 	left: 80%;
 }
 
+/************ Working Process Area Css *************/
+.working-process-area{
+   overflow: hidden;
+}
+.working-process-area .section-title{
+   text-align: center;
+}
+.working-process-area .section-title h2 {
+	margin: 0 auto;
+	margin-top: 18px;
+	width: 55%;
+}
+.work-process-parent-grid{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px;
+   text-align: center;
+}
 
+.wrok_process_thumb{
+   position: relative;
+   z-index: 1;
+}
+.work_progress .wrok_process_thumb::before {
+	position: absolute;
+	content: "";
+	top: 85%;
+	right: -35px;
+	height: 89%;
+	width: 100%;
+	background: url('../images/line-shape.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	transform: translate(48%, -50%);
+	left: inherit;
+}
+.work_progress .work_progress-number {
+	position: absolute;
+	right: 90px;
+	top: 60.5%;
+	margin: auto;
+	left: inherit;
+	transition: all 400ms linear;
+}
+.work_progress-number span {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	border: 2px solid var(--primary-text-color);
+	border-radius: 100%;
+	display: block;
+	font-weight: 600;
+	color: var(--primary-text-color);
+   transition: 0.4s;
+}
+.work_progress:hover .work_progress-number span{
+   background: var(--primary-text-color);
+   color: #fff;
+   transition: 0.4s;
+}
+
+.work_progress:last-child .wrok_process_thumb::before{
+   display: none;
+}
+.wrok_process_thumb img {
+	max-width: 100%;
+}
+.work_progress-title h3 {
+	margin: 35px 0px 15px 0px;
+}
+
+.work_progress-desc p {
+	color: #000;
+}
+
+
+/************ Header Area Css *************/
+/************ Header Area Css *************/
+/************ Header Area Css *************/
+/************ Header Area Css *************/
+/************ Header Area Css *************/
+/************ Header Area Css *************/
+/************ Header Area Css *************/
+/************ Header Area Css *************/
 /************ Header Area Css *************/
 /************ Header Area Css *************/
 

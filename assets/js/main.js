@@ -10,7 +10,7 @@ document.getElementById('closePopupBtn').addEventListener('click', function() {
   document.body.classList.remove('hide-scroll')
 });
 
-// menu stoky js
+// menu sticky js
 var scrollpos = window.scrollY,
     header = document.getElementById("header");
 
@@ -35,39 +35,51 @@ window.addEventListener('scroll', function() {
 //counter up JS
 const c = (s, st, e, d) => {
     const el = document.querySelector(s);
+    if (!el) {
+        console.error(`Element not found: ${s}`);
+        return;
+    }
+    
     let t = null;
-
+  
     const a = (ts) => {
         if (!t) t = ts;
         const p = Math.min((ts - t) / d, 1);
         el.innerText = Math.floor(p * (e - st) + st);
         if (p < 1) window.requestAnimationFrame(a);
     };
-
+  
     window.requestAnimationFrame(a);
-};
-
-const ac = () => {
-    c("#count1", 300, 10, 1000);
-    c("#count2", 5000, 4000, 1500);
+  };
+  
+  const ac = () => {
+    c("#count1", 300, 25, 1000);
+    c("#count2", 5000, 100, 1500);
     c("#count3", 1000, 150, 2000);
-    c("#count4", 500, 10, 2500);
+    c("#count4", 500, 20, 2500);
     c("#count5", 500, 2, 2500);
     c("#count6", 500, 96, 2500);
-};
-
-let is = false;
-
-const ca = () => {
+  };
+  
+  let is = false;
+  
+  const ca = () => {
     if (is) return;
     const se = document.querySelector("#scrollanime");
+    if (!se) {
+        console.error("Element not found: #scrollanime");
+        return;
+    }
+  
     if (se.getBoundingClientRect().top + 50 <= (window.innerHeight || document.documentElement.clientHeight)) {
         ac();
         is = true;
     }
-};
+  };
+  
+  window.addEventListener("scroll", ca);
+  
 
-window.addEventListener("scroll", ca);
 
 //progressbar JS
 function loading() {
@@ -87,7 +99,6 @@ function loading() {
        }
     });
   }
-  
   setTimeout(loading, 1000);
 
 
