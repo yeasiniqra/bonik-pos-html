@@ -1,4 +1,29 @@
 "use strict";
+// offCanvas mobile menu JS
+const toggleMenu = () => {
+  const menu = document.querySelector('.off-canvas-menu');
+  const overlay = document.querySelector('.overlay');
+  menu.classList.toggle('open');
+  overlay.classList.toggle('active');
+}
+
+window.addEventListener('click', function(event) {
+  const menu = document.querySelector('.off-canvas-menu');
+  const overlay = document.querySelector('.overlay');
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (!menu.contains(event.target) && event.target !== menuToggle) {
+    menu.classList.remove('open');
+    overlay.classList.remove('active');
+  }
+});
+
+ //mobile menu dropdown JS
+ for (var allHasChildren = document.querySelectorAll(".menu-item-has-children a"), x = 0; x < allHasChildren.length; x++)
+  allHasChildren[x].onclick = function () {
+      var e = this.parentNode.getElementsByClassName("sub-menu")[0];
+      e.classList.contains("show") ? e.classList.remove("show") : e.classList.add("show");
+  }; 
+
 // video popup JS
 document.getElementById('openPopupBtn').addEventListener('click', function() {
   document.getElementById('popup').style.display = 'block';

@@ -3,9 +3,9 @@
 <!--[if IE 7]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en-US">
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <title>BONIK POS</title>
         <meta name="description" content="" />
@@ -16,18 +16,17 @@
         <!-- Owl Carousel css -->
         <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css" media="all" />
         <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" media="all" />
-        <!-- Bootstrap Icon -->
-        <!-- <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"> -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
-
         <!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="assets/css/font-awesome.css" />
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/font-awesome.css" >
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" >
         <!-- normalize -->
-        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/normalize.css" >
         <!-- Main Stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+        <link rel="stylesheet" href="assets/css/style.css" >
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" >
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -36,7 +35,7 @@
         <!--===========================================
                 Start header area
          =============================================-->
-        <section id="header" class="header-area">
+        <header id="header" class="header-area">
             <div class="header-top-parent">
                 <div class="container">
                     <!-- header top content -->
@@ -46,9 +45,6 @@
                                 <li>
                                     <a href="mailto:info@bonikpos.com "><i class="fas fa-envelope"></i>info@bonikpos.com</a>
                                 </li>
-                                <!-- <li>
-                                <a href="mailto:info@iqrasys.com "><i class="fa fa-envelope-o" aria-hidden="true"></i>info@iqrasys.com</a>
-                            </li> -->
                                 <li>
                                     <a href="tel:01778-772327"><i class="fas fa-mobile-alt"></i>+88 01778-772327</a>
                                 </li>
@@ -85,7 +81,12 @@
                             <img src="assets/images/favs.png" alt="bonik logo">
                         </a>
                     </div>
-                    <div class="main-menu">
+                    <!-- Start mobile togle menu -->
+                    <button class="menu-toggle" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <!-- End mobile togle menu -->
+                    <div class="main-menu off-canvas-menu">
                         <ul class="flex">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
@@ -123,14 +124,15 @@
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Get A Quote</a></li>
                         </ul>
+                        <div class="overlay" onclick="toggleMenu()"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
         <!--===========================================
                 End header area
          =============================================-->
-
+        <main class="main-content-body">  
         <!--===========================================
                 Start Banner area
          =============================================-->
@@ -159,7 +161,7 @@
                                   </div>
                                 </div>
                                 <div id="openPopupBtn" class="video-play-btn video-popup mfp-iframe" data-lity><i class="fa fa-play"></i></div>
-                              </div>
+                            </div>
                         </div>
 
                     </div>
@@ -383,9 +385,9 @@
                                     <span>40%</span>
                                 </div>
                                 <div class="progress-bar">
-                                <div class="bar" data-size="40">
-                                    <span class="perc"></span>
-                                </div>
+                                    <div class="bar" data-size="40">
+                                        <span class="perc"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="progress-single-item">
@@ -394,9 +396,9 @@
                                     <span>50%</span>
                                 </div>
                                 <div class="progress-bar">
-                                <div class="bar" data-size="60">
-                                    <span class="perc"></span>
-                                </div>
+                                    <div class="bar" data-size="60">
+                                        <span class="perc"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="progress-single-item">
@@ -405,9 +407,9 @@
                                     <span>70%</span>
                                 </div>
                                 <div class="progress-bar">
-                                <div class="bar" data-size="80">
-                                    <span class="perc"></span>
-                                </div>
+                                    <div class="bar" data-size="80">
+                                        <span class="perc"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="progress-single-item">
@@ -416,9 +418,9 @@
                                     <span>90%</span>
                                 </div>
                                 <div class="progress-bar">
-                                <div class="bar" data-size="90">
-                                    <span class="perc"></span>
-                                </div>
+                                    <div class="bar" data-size="90">
+                                        <span class="perc"></span>
+                                    </div>
                                 </div>
                             </div>
                           </div>
@@ -437,7 +439,7 @@
          <!--===========================================
                    Start working process area
          =============================================-->
-            <section class="working-process-area section-padding">
+        <section class="working-process-area section-padding">
                 <div class="container">
                     <div class="section-title">
                         <span>Work Process</span>
@@ -447,90 +449,96 @@
                         <!-- single item -->
                         <div class="work_progress">
                             <div class="wrok_process_thumb">
-                                <img loading="lazy" src="assets/images/s1.png" alt="process" />
+                                <img loading="lazy" src="assets/images/s1.png" alt="process" >
                                 <div class="work_progress-number">
                                     <span>1</span>
                                 </div>
                             </div>
                             <div class="progress_content">
                                 <div class="work_progress-title">
-                                    <h3>
-                                        Business Planning
-                                    </h3>
+                                    <h3>Business Planning</h3>
                                 </div>
                                 <div class="work_progress-desc">
-                                    <p>
-                                        Conveniently restore distributed testing technology with flexible e-business. highly efficient e-tailers.
-                                    </p>
+                                    <p>Conveniently restore distributed testing technology with flexible e-business. highly efficient e-tailers.</p>
                                 </div>
                             </div>
                         </div>
                          <!-- single item -->
-                         <div class="work_progress">
+                        <div class="work_progress">
                             <div class="wrok_process_thumb">
-                                <img decoding="async" src="assets/images/s2.png" alt="process" />
+                                <img decoding="async" src="assets/images/s2.png" alt="process" >
                                 <div class="work_progress-number">
                                     <span>2</span>
                                 </div>
                             </div>
                             <div class="progress_content">
                                 <div class="work_progress-title">
-                                    <h3>
-                                        Starting Projects
-                                    </h3>
+                                    <h3>Starting Projects</h3>
                                 </div>
                                 <div class="work_progress-desc">
-                                    <p>
-                                        Conveniently restore distributed testing technology with flexible e-business. highly efficient e-tailers.
-                                    </p>
+                                    <p>Conveniently restore distributed testing technology with flexible e-business. highly efficient e-tailers.</p>
                                 </div>
                             </div>
                         </div>
                          <!-- single item -->
-                         <div class="work_progress">
+                        <div class="work_progress">
                             <div class="wrok_process_thumb">
-                                <img decoding="async" src="assets/images/s3.png" alt="process" />
+                                <img decoding="async" src="assets/images/s3.png" alt="process" >
                                 <div class="work_progress-number">
                                     <span>3</span>
                                 </div>
                             </div>
                             <div class="progress_content">
                                 <div class="work_progress-title">
-                                    <h3>
-                                        Completing Works 
-                                    </h3>
+                                    <h3>Completing Works</h3>
                                 </div>
                                 <div class="work_progress-desc">
-                                    <p>
-                                        Conveniently restore distributed testing technology with flexible e-business. highly efficient e-tailers.
-                                    </p>
+                                    <p>Conveniently restore distributed testing technology with flexible e-business. highly efficient e-tailers.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+        </section>
          <!--===========================================
                        End working process area
+         =============================================-->
+        </main>  
+
+          <!--===========================================
+                Start footer area
+         =============================================-->
+            <footer class="footer-area">
+                <div class="container">
+                    <div class="footer__max">
+
+                    </div>
+                </div>
+            </footer>
+
+          <!--===========================================
+                End footer area
          =============================================-->
 
 
 
 
-        <!-- Start popup video  -->
+
+        <!-- Start Popup Video  -->
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span class="close" id="closePopupBtn">&times;</span>
-                <iframe width="650" height="400" src="https://www.youtube.com/embed/BB49x_uMlGA?si=zEt9nS4nde6QYA3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="650" height="400" src="https://www.youtube.com/embed/BB49x_uMlGA?si=zEt9nS4nde6QYA3x" title="YouTube video player"></iframe>
             </div>
         </div> 
-        <!-- End popup video  -->
+        <!-- End Popup Video  -->
 
         <!-- Js Files -->
         <!-- modernizr -->
         <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
         <!-- jQuery -->
-        <script type="text/javascript" src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <!-- <script type="text/javascript" src="assets/js/vendor/jquery-3.6.0.min.js"></script> -->
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
         <!-- Bootstrap Popper -->
         <script src="assets/js/popper.js"></script>
         <!-- Owl Carousel JS -->
