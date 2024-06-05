@@ -39,21 +39,21 @@ document.getElementById('closePopupBtn').addEventListener('click', function() {
 var scrollpos = window.scrollY,
     header = document.getElementById("header");
 
-function add_class_on_scroll() {
-    header.classList.add("sticky-menu");
-}
+// function add_class_on_scroll() {
+//     header.classList.add("sticky-menu");
+// }
 
-function remove_class_on_scroll() {
-    header.classList.remove("sticky-menu");
-}
+// function remove_class_on_scroll() {
+//     header.classList.remove("sticky-menu");
+// }
 
 window.addEventListener('scroll', function() {
     scrollpos = window.scrollY;
 
     if (scrollpos > 100) { 
-        add_class_on_scroll();
+      header.classList.add("sticky-menu");
     } else {
-        remove_class_on_scroll();
+      header.classList.remove("sticky-menu");
     }
 });
 

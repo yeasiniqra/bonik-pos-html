@@ -316,6 +316,9 @@ h3 {
 .header-social-media > ul > li:last-child {
    margin-right: 0;
 }
+.header-social-media > ul > li:hover a i{
+   color: var(--primary-text-color);
+}
 
 .header-main-content {
 	padding: 15px 0px;
@@ -454,7 +457,7 @@ h3 {
 .banner-area{
    position: relative;
    z-index: 2;
-   background: url('../images/banner1.jpg') no-repeat scroll 0 0 / 100% 100%;
+   background: url('../images/banner2.jpg') no-repeat scroll 0 0 / 100% 100%;
    padding-top: 200px;
    padding-bottom: 100px;
    background-size: cover;
@@ -743,7 +746,7 @@ h3 {
       z-index: -2;
       width: 105%;
       height: 105%;
-      background: url('../images/line1.png') no-repeat scroll 0 0 / 100% 100%;
+      background: url('../images/line11.png') no-repeat scroll 0 0 / 100% 100%;
    }
 
    .banner-content-right {
@@ -862,7 +865,7 @@ h3 {
 .about-area{
    position: relative;
    z-index: 2;
-   background: url('../images/counter.jpg') no-repeat scroll 0 0 / 100% 100%;
+   background: url('../images/counter1.jpg') no-repeat scroll 0 0 / 100% 100%;
    padding-top: 100px;
    padding-bottom: 100px;
    background-size: cover;
@@ -1098,7 +1101,7 @@ h3 {
 	right: -35px;
 	height: 89%;
 	width: 100%;
-	background: url('../images/line-shape.png');
+	background: url('../images/line-shape1.png');
 	background-position: center center;
 	background-repeat: no-repeat;
 	transform: translate(48%, -50%);
