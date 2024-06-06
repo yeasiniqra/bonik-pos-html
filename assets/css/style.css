@@ -3,7 +3,7 @@
  Landingpage Default css
 */
 :root {
-   --primary-text-color : #0C53A6;
+   --primary-text-color : #00A2E2;
    --secondary-text-color : #232323;
    --font-family-primary : 'Space Grotesk', sans-serif;
    --body-bg : #ECF0F5;
@@ -257,10 +257,29 @@ h3 {
 	padding: 12px 0px;
 }
 
-.logo > a img {
-	width: 65px;
+/* .logo > a img {
+	width: 85px;
 	height: auto;
+} */
+
+.logo > a img {
+   max-height: 85px;
 }
+
+.scroll-logo {
+   display: none;
+}
+.header-area.sticky-menu .logo .fixed-logo {
+   display: none;
+}
+.header-area.sticky-menu .logo .scroll-logo img{
+   width: 65px;
+}
+.header-area.sticky-menu .logo .scroll-logo {
+   display: block;
+}
+
+
 
 .header-top-parent{
    position: relative;
@@ -328,7 +347,7 @@ h3 {
     transition: 0.4s;
 }
 .header-area.sticky-menu .header-main-content {
-   padding: 12px 0px;
+   padding: 10px 0px;
    -webkit-transition: 0.4s;
    -webkit-transition: 0.4s;
    -o-transition: 0.4s;
@@ -496,10 +515,44 @@ h3 {
 	line-height: 1;
 	display: block;
 	padding: 20px 0px;
+   /* animation: fadeIn 2s forwards; */
+   position: relative;
 }
+
+.rs-layer {
+   opacity: 0;
+   animation: fadeIn 1s forwards;
+ }
+
+ /* .rs-layer:nth-child(1) {
+   animation-delay: 0.5s;
+ }
+
+ .rs-layer:nth-child(2) {
+   animation-delay: 1s;
+ }
+
+ .rs-layer:nth-child(3) {
+   animation-delay: 1.5s;
+ } */
+
+ @keyframes fadeIn {
+   0% {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+
 .banner-content-inner > h1 > b{
    color: var(--primary-text-color);
 }
+
+
 
 
 /* line css */
@@ -530,7 +583,7 @@ h3 {
 	width: 30px;
 	top: 0;
 	left: 0px;
-	background-color: #e1a0a0;
+	background-color: var(--primary-text-color);
 	-webkit-animation: moveLeftBounces-two 10s linear infinite;
 	animation: moveLeftBounces-two 10s linear infinite;
 	overflow: hidden;
@@ -726,8 +779,12 @@ h3 {
       width: 90%;
       height: auto;
    }
+   .silde-item img{
+      width: 70% !important;
+   }
+   
 
-   .banner-image::before {
+   /* .banner-image::before {
       content: "";
       position: absolute;
       top: -24px;
@@ -747,6 +804,13 @@ h3 {
       width: 105%;
       height: 105%;
       background: url('../images/line11.png') no-repeat scroll 0 0 / 100% 100%;
+   } */
+
+
+   .shap1,
+   .shap2 {
+      position: absolute;
+      left: 0;
    }
 
    .banner-content-right {
@@ -773,7 +837,20 @@ h3 {
           -webkit-transform: scale(1.1)
       }
   }
-  
+
+
+  /* @keyframes fadeIn {
+   0% {
+     opacity: 0;
+     transform: translateY(40px);
+   }
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ } */
+
+
 
 /************ Service Area Css *************/
 .services-area{

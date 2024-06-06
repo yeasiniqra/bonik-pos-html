@@ -49,8 +49,7 @@ var scrollpos = window.scrollY,
 
 window.addEventListener('scroll', function() {
     scrollpos = window.scrollY;
-
-    if (scrollpos > 100) { 
+    if (scrollpos > 120) { 
       header.classList.add("sticky-menu");
     } else {
       header.classList.remove("sticky-menu");

@@ -19,6 +19,8 @@
         <!-- Fontawesome CSS -->
         <link rel="stylesheet" href="assets/css/font-awesome.css" >
         <link rel="stylesheet" href="assets/css/font-awesome.min.css" >
+         <!-- Aos CSS -->
+         <link rel="stylesheet" href="assets/css/aos.css" >
         <!-- normalize -->
         <link rel="stylesheet" href="assets/css/normalize.css" >
         <!-- Main Stylesheet -->
@@ -76,10 +78,8 @@
             <div class="container">
                 <div class="header-main-content flex-between">
                     <div class="logo">
-                        <a href="index.html">
-                            <!-- <h2>BONIK POS</h2> -->
-                            <img src="assets/images/favs.png" alt="bonik logo">
-                        </a>
+                        <a class="fixed-logo" href="index.html"><img loading="lazy" src="assets/images/white-logo.png" alt="white logo Pos Software"></a>
+                        <a class="scroll-logo" href="index.html"><img loading="lazy" src="assets/images/logo-withbg.png" alt="Black logo Bonik Pos Software"></a>
                     </div>
                     <!-- Start mobile togle menu -->
                     <button class="menu-toggle" onclick="toggleMenu()">
@@ -142,7 +142,7 @@
                     <div class="banner-content-left">
                         <div class="banner-content-inner">
                             <span>Work with Bonik Pos</span>
-                            <h1>Create the Empactful Digital <b>Services</b> </h1>
+                            <h1 class="rs-layer">Create the Empactful Digital <b>Services</b> </h1>
                             <p>Quickly parallel task bleeding-edge mindshare vis-a-vis best-of-breed testing procedures. Globally myocardinate world</p>
                         </div>
                         <div class="lines">
@@ -170,8 +170,10 @@
                             <img class="dance" src="assets/images/Finance-Consultant.png" alt="img">
                         </div>
                         <div class="banner-image">
-                            <img src="assets/images/Retail-Management-Software1.jpg" alt="bonik Pos">
+                            <img data-aos="fade-down" data-aos-duration="600" class="shap1" src="assets/images/line2.png" alt="">
+                            <img data-aos="fade-up" data-aos-duration="1800" src="assets/images/Retail-Management-Software1.jpg" alt="bonik Pos">
                             <!-- <img src="assets/images/retails-pos-india1.jpg" alt="bonik Pos"> -->
+                            <img data-aos="fade-left" data-aos-duration="2500" class="shap2" src="assets/images/line1.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -202,7 +204,7 @@
                     <!-- single item -->
                     <div class="single-service-item">
                         <div class="counters">01</div>
-                        <img src="assets/images/code.png" alt="code image">
+                        <img src="assets/images/code1.png" alt="code image">
                         <h3>Website <br> Development</h3>
                         <div class="services-line">
                             <div class="lines">
@@ -217,7 +219,7 @@
                     <!-- single item -->
                     <div class="single-service-item">
                         <div class="counters">02</div>
-                        <img src="assets/images/color.png" alt="code image">
+                        <img src="assets/images/color1.png" alt="code image">
                         <h3>Software <br> Development</h3>
                         <div class="services-line">
                             <div class="lines">
@@ -232,7 +234,7 @@
                     <!-- single item -->
                     <div class="single-service-item">
                         <div class="counters">03</div>
-                        <img src="assets/images/icon1.png" alt="code image">
+                        <img src="assets/images/icon11.png" alt="code image">
                         <h3>Mobile Application <br> Designing</h3>
                         <div class="services-line">
                             <div class="lines">
@@ -247,7 +249,7 @@
                     <!-- single item -->
                     <div class="single-service-item">
                         <div class="counters">04</div>
-                        <img src="assets/images/icon2.png" alt="code image">
+                        <img src="assets/images/icon22.png" alt="code image">
                         <h3>Database <br> Managements</h3>
                         <div class="services-line">
                             <div class="lines">
@@ -554,6 +556,8 @@
         <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
         <!-- Bootstrap Popper -->
         <script src="assets/js/popper.js"></script>
+        <!-- aos Popper -->
+        <script src="assets/js/aos.js"></script>
         <!-- Owl Carousel JS -->
         <script src="assets/js/owl.carousel.min.js"></script>
         <!-- Custom Scripts -->
