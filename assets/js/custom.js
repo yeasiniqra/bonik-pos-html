@@ -1,33 +1,59 @@
 $(document).ready(function(){
     //aos js
     AOS.init();
+
     // complete project slider JS
-		$('.banner-slider').owlCarousel({
-			loop:true,
-			margin:true,
-			nav:true,
-			autoplay:true,
-			autoplayTimeout:4500,
-			dots:false,
-			items:1,
-				responsive:{
-				0:{
-					items:1
-				},
-				575:{
-					items:1
-				},
-				767:{
-					items:1
-				},
-				992:{
-					items:1
-				},
-				1200:{
-					items:1
-				}
-			}
-		})
+	// $('.test_images').owlCarousel({
+	// 		loop:true,
+	// 		margin:true,
+	// 		nav:true,
+	// 		autoplay:true,
+	// 		autoplayTimeout:4500,
+	// 		dots:false,
+	// 		items:1,
+	// 			responsive:{
+	// 			0:{
+	// 				items:1
+	// 			},
+	// 			575:{
+	// 				items:1
+	// 			},
+	// 			767:{
+	// 				items:1
+	// 			},
+	// 			992:{
+	// 				items:1
+	// 			},
+	// 			1200:{
+	// 				items:1
+	// 			}
+	// 		}
+	// })
+
+	//slick slider js
+	var $customSlide = $(".custom-slide")
+        .slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            speed: 2000,
+            autoplaySpeed: 4000,
+            autoplay: true
+        })
+        .on({
+            beforeChange: function(event, slick, currentSlide, nextSlide) {
+                $(".slick-slide", this).eq(currentSlide).addClass("custom-preve-slide");
+                $(".slick-slide", this).eq(nextSlide).addClass("custom-slide-animation");
+            },
+            afterChange: function() {
+                $(".custom-preve-slide", this).removeClass("custom-preve-slide custom-slide-animation");
+            }
+        });
+    $customSlide.find(".slick-slide").eq(0).addClass("custom-slide-animation");
+
+	
 });
 
 

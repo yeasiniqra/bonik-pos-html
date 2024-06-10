@@ -240,6 +240,10 @@ h3 {
    padding-top: 40px;
 }
 
+.all-wapper{
+   overflow: hidden !important;
+}
+
 /************ Header Area Css *************/
 .header-area {
    position: absolute;
@@ -295,7 +299,7 @@ h3 {
 	z-index: -1;
 	transform: skew(-26deg);
 	padding-left: 20px;
-	background: var(--primary-text-color);
+	/* background: var(--primary-text-color); */
 }
 .header-top-parent::before {
 	content: "";
@@ -304,7 +308,7 @@ h3 {
 	right: 0;
 	width: 100%;
 	height: 100%;
-	background: #252628;
+	/* background: #252628; */
 	z-index: -1;
 }
 .header-contact-info > ul > li {
@@ -476,11 +480,12 @@ h3 {
 .banner-area{
    position: relative;
    z-index: 2;
-   background: url('../images/banner4.jpg') no-repeat scroll 0 0 / 100% 100%;
+   /* background: url('../images/banner4.jpg') no-repeat scroll 0 0 / 100% 100%;
    padding-top: 200px;
-   padding-bottom: 100px;
+   padding-bottom: 100px; */
    background-size: cover;
    background-position: center center;
+   overflow: hidden;
 }
 
 .banner-content-main {
@@ -811,7 +816,19 @@ h3 {
    .shap2 {
       position: absolute;
       left: 0;
+      width: 100% !important;
    }
+   .shap1 {
+      top: -34px;
+      z-index: 1;
+      left: -13px;
+      width: 105% !important;
+   }
+   .shap2 {
+      top: -18px;
+      z-index: -2;
+   }
+   
 
    .banner-content-right {
       position: relative;
@@ -1057,7 +1074,7 @@ h3 {
 
 /* progress bar css */
 .progress-bar {
-	height: 8px;
+	height: 9px;
 	width: 100%;
 	background-color: #ddd;
 	border-radius: 20px;
@@ -1072,9 +1089,7 @@ h3 {
  .bar {
    width: 0;
    height: 100%;
-   background-color: #B6244F;
-   
-   /*Lollipop background gradient*/
+   /* background-color: #B6244F;
    background-image: linear-gradient(
      -45deg,
      rgba(255, 255, 255, .2) 25%,
@@ -1084,12 +1099,13 @@ h3 {
      rgba(255, 255, 255, .2) 75%,
      transparent 75%,
      transparent
-   );
-  
+   ); */
+   background: var(--primary-text-color);
    background-size: 30px 30px;
    animation: move 2s linear infinite;
    box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
    transition: width 2s ease-out;
+   
  }
  
 
@@ -1228,7 +1244,103 @@ h3 {
    overflow: hidden;
 }
 
+
+/************ Back to top Area Css *************/
+#backToTopBtn {
+	display: none;
+	position: fixed;
+	bottom: 22px;
+	right: 20px;
+	background-color: var(--primary-text-color);
+	color: white;
+	border: none;
+	border-radius: 100%;
+	cursor: pointer;
+	z-index: 99;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+#backToTopBtn span i {
+	font-size: 20px;
+} 
+
 /************ Header Area Css *************/
+/* custom-slide */
+.banner-overly-content{
+   position: absolute;
+   width: 100%;
+   top: 200px;
+   z-index: 9;
+}
+.slider-parent-grid {
+	position: relative;
+}
+.slider-parent-grid::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+.custom-slide {
+   position: relative;
+   margin: 0;
+   padding: 0;
+}
+.custom-slide .custom-slide-item {
+   position: relative;
+   height: 100%;
+   min-height: 740px;
+}
+
+.custom-slide .custom-slide-item::before {
+   display: block;
+   padding-top: 39%;
+   content: "";
+}
+.custom-slide .custom-slide-item .custom-slide-image {
+   position: relative;
+   overflow: hidden;
+   min-height: 740px;
+}
+.custom-slide .custom-slide-item img {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   margin: auto;
+   width: 100%;
+   min-height: 740px;
+}
+.custom-slide > .slick-list,
+.custom-slide > .slick-list > .slick-track,
+.custom-slide > .slick-list > .slick-track > .slick-slide > div {
+   position: relative;
+   height: 100%;
+}
+.custom-slide-animation {
+   animation: custom-fadezoom 8s 0s forwards;
+}
+
+@keyframes custom-fadezoom {
+   0% {
+       transform: scale(1.2);
+   }
+   100% {
+       transform: scale(1);
+   }
+}
+
+ 
+ 
+ 
 /************ Header Area Css *************/
 /************ Header Area Css *************/
 /************ Header Area Css *************/
