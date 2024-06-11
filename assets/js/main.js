@@ -42,7 +42,6 @@ var scrollpos = window.scrollY,
 // function add_class_on_scroll() {
 //     header.classList.add("sticky-menu");
 // }
-
 // function remove_class_on_scroll() {
 //     header.classList.remove("sticky-menu");
 // }

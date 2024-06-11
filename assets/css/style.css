@@ -1,13 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
-/*
- Landingpage Default css
-*/
 :root {
    --primary-text-color : #00A2E2;
    --secondary-text-color : #232323;
    --font-family-primary : 'Space Grotesk', sans-serif;
    --body-bg : #ECF0F5;
  }
+
 body{
   margin: 0;
   padding: 0;
@@ -267,7 +264,7 @@ h3 {
 } */
 
 .logo > a img {
-   max-height: 85px;
+   max-height: 80px;
 }
 
 .scroll-logo {
@@ -1337,9 +1334,6 @@ h3 {
        transform: scale(1);
    }
 }
-
- 
- 
  
 /************ Header Area Css *************/
 /************ Header Area Css *************/
