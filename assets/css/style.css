@@ -3,6 +3,8 @@
    --secondary-text-color : #232323;
    --font-family-primary : 'Space Grotesk', sans-serif;
    --body-bg : #ECF0F5;
+   --btn-color : linear-gradient(to right, #308eca, #004d80);
+   --btn-reverse : linear-gradient(to right,#004d80, #308eca);
  }
 
 body{
@@ -163,21 +165,21 @@ p {
 }
 
 .common-btn > a {
-	background: var(--primary-text-color);
+	background: var(--btn-color);
 	display: inline-block;
 	color: #fff;
 	padding: 20px 40px;
 	border-radius: 50px;
 	font-weight: 500;
 	font-size: 18px;
-	border: 1px solid var(--primary-text-color);
+	/* border: 1px solid transparent; */
    transition: 0.5s;
 }
 .common-btn > a:hover{
-   background: #fff;
+   background: var(--btn-reverse);
    transition: 0.5s;
-   color: var(--primary-text-color);
-   border: 1px solid #fff;
+   color: #fff;
+   /* border: 1px solid #fff; */
 }
 
 .common-btn > a > i {
@@ -301,11 +303,11 @@ h3 {
 .header-top-parent::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	right: 0;
+	left: 0;
+	bottom: 0px;
 	width: 100%;
-	height: 100%;
-	/* background: #252628; */
+	height: 1px;
+	background: #9c9292;
 	z-index: -1;
 }
 .header-contact-info > ul > li {
@@ -373,7 +375,7 @@ h3 {
    margin-right: 0px;
 }
 .main-menu > ul > li:last-child a {
-	background: var(--primary-text-color);
+	background: var(--btn-color);
 	color: #fff;
 	padding: 11px 22px;
 	border-radius: 3px;
@@ -382,11 +384,11 @@ h3 {
 	transition: 0.6s;
 }
 .main-menu > ul > li:last-child:hover a{
-   background: #fff;
-   color: var(--primary-text-color);
+   background: var(--btn-reverse);
+   transition: 0.6s;
 }
 .header-area.sticky-menu .main-menu > ul > li:last-child:hover a{
-   background: var(--primary-text-color);
+   background: var(--btn-reverse);
    color: #fff;
 }
 .header-area.sticky-menu .main-menu > ul > li:last-child a{
@@ -487,7 +489,7 @@ h3 {
 
 .banner-content-main {
 	display: grid;
-	grid-template-columns: 7fr 5fr;
+	grid-template-columns: 8fr 4fr;
 	gap: 30px;
    align-items: center;
 }
@@ -676,25 +678,6 @@ h3 {
    cursor: pointer;
  }
  
- @keyframes waves {
-   0% {
-     -webkit-transform: scale(0.2, 0.2);
-     transform: scale(0.2, 0.2);
-     opacity: 0;
-     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   }
-   50% {
-     opacity: 0.9;
-     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-   }
-   100% {
-     -webkit-transform: scale(0.9, 0.9);
-     transform: scale(0.9, 0.9);
-     opacity: 0;
-     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   }
- }
- 
  .fa-play:before {
    content: "\f04b";
  }
@@ -713,6 +696,26 @@ h3 {
     -webkit-animation: waves 3s ease-in-out infinite;
    animation: waves 3s ease-in-out infinite;
  }
+
+ @keyframes waves {
+   0% {
+     -webkit-transform: scale(0.2, 0.2);
+     transform: scale(0.2, 0.2);
+     opacity: 0;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   }
+   50% {
+     opacity: 0.9;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+   }
+   100% {
+     -webkit-transform: scale(0.9, 0.9);
+     transform: scale(0.9, 0.9);
+     opacity: 0;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   }
+ }
+
          
  .wave-1 {
    -webkit-animation-delay: 0s;
@@ -829,6 +832,7 @@ h3 {
 
    .banner-content-right {
       position: relative;
+      text-align: center;
    }
 
    .dance-parent {
@@ -884,7 +888,7 @@ h3 {
 
 
 .common-btn.withOut-banner:hover a{
-   background: var(--primary-text-color);
+   background: var(--btn-reverse);
    color: var(--primary-text-color);
 }
 .common-btn.withOut-banner a::before {
@@ -1264,7 +1268,8 @@ h3 {
 } 
 
 /************ Header Area Css *************/
-/* custom-slide */
+
+/***===== banner slick slider JS =====***/
 .banner-overly-content{
    position: absolute;
    width: 100%;
@@ -1293,7 +1298,7 @@ h3 {
 .custom-slide .custom-slide-item {
    position: relative;
    height: 100%;
-   min-height: 740px;
+   min-height: 700px;
 }
 
 .custom-slide .custom-slide-item::before {
@@ -1304,7 +1309,7 @@ h3 {
 .custom-slide .custom-slide-item .custom-slide-image {
    position: relative;
    overflow: hidden;
-   min-height: 740px;
+   min-height: 700px;
 }
 .custom-slide .custom-slide-item img {
    position: absolute;
@@ -1314,7 +1319,7 @@ h3 {
    left: 0;
    margin: auto;
    width: 100%;
-   min-height: 740px;
+   min-height: 700px;
 }
 .custom-slide > .slick-list,
 .custom-slide > .slick-list > .slick-track,
@@ -1327,12 +1332,21 @@ h3 {
 }
 
 @keyframes custom-fadezoom {
-   0% {
-       transform: scale(1.2);
-   }
-   100% {
+   
+      0% {
+         transform: scale(1.2);
+      }
+      100% {
+         transform: scale(1);
+      } 
+  
+
+   /* 0% {
        transform: scale(1);
    }
+   100% {
+       transform: scale(1.2);
+   } */
 }
  
 /************ Header Area Css *************/

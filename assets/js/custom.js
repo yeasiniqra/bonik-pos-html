@@ -38,8 +38,8 @@ $(document).ready(function(){
             slidesToScroll: 1,
             arrows: false,
             fade: true,
-            speed: 2000,
-            autoplaySpeed: 4000,
+            speed: 5000,
+            autoplaySpeed: 8500,
             autoplay: true
         })
         .on({
@@ -52,7 +52,6 @@ $(document).ready(function(){
             }
         });
     $customSlide.find(".slick-slide").eq(0).addClass("custom-slide-animation");
-
 	
 });
 
