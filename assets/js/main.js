@@ -161,60 +161,6 @@ const loadBars = () => {
 };
 
 window.addEventListener("scroll", checkScroll);
-
-
-
-// function loading() {
-//   document.querySelectorAll(".bar").forEach(function(current) {
-//     let startWidth = 0;
-//     const endWidth = current.dataset.size;
-//     const interval = setInterval(frame, 20);
-
-//     function frame() {
-//       if (startWidth >= endWidth) {
-//         clearInterval(interval);
-//       } else {
-//         startWidth++;
-//         current.style.width = `${startWidth}%`;
-//         current.firstElementChild.innerText = `${startWidth}%`;
-//       }
-//     }
-//   });
-// }
-
-// let timeoutId;
-// let hasScrolled80px = false;
-
-// window.addEventListener('scroll', function() {
-//   if (window.scrollY >= 120 && !hasScrolled80px) {
-//     hasScrolled80px = true;
-//     timeoutId = setTimeout(loading, 1000);
-//   }
-// });
-
-
-
-
-  // let iss = false;
-  
-  // const caa = () => {
-  //   if (iss) return;
-  //   const ses = document.querySelector("#scrollanimes");
-  //   if (!ses) {
-  //       console.error("Element not found: #scrollanimes");
-  //       return;
-  //   }
-  
-  //   if (ses.getBoundingClientRect().top + 70 <= (window.innerHeight || document.documentElement.clientHeight)) {
-  //       setTimeout(loading, 1000);
-  //       iss = true;
-  //   }
-  // };
-  
-  // window.addEventListener("scroll", caa);
-
-  
-
   
   // back to top JS
   const backToTopBtn = document.getElementById("backToTopBtn");
