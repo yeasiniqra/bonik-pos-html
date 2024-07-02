@@ -665,9 +665,9 @@ h3 {
  }
  
  .video-play-btn {
-   height: 50px;
-   width: 50px;
-   line-height: 50px;
+   height: 80px;
+   width: 80px;
+   line-height: 80px;
    text-align: center;
    border-radius: 100%;
    background: transparent;
@@ -684,8 +684,8 @@ h3 {
  
  .waves {
    position: absolute;
-   width: 150px;
-   height: 150px;
+   width: 180px;
+   height: 180px;
    background: rgba(255, 255, 255, 0.3);
    opacity: 0;
    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -731,6 +731,13 @@ h3 {
    -webkit-animation-delay: 2s;
    animation-delay: 2s;
  }
+
+ .video-play-btn i {
+	font-size: 25px;
+	position: relative;
+	top: 4px;
+	left: 2px;
+}
 
 
  /* video popup css*/

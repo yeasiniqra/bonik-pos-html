@@ -124,7 +124,6 @@ function loading() {
   }
   setTimeout(loading, 1000);
 
-
   // back to top JS
   const backToTopBtn = document.getElementById("backToTopBtn");
 
