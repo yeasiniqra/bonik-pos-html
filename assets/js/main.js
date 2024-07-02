@@ -105,25 +105,117 @@ const c = (s, st, e, d) => {
 
 
 //progressbar JS
-function loading() {
-    document.querySelectorAll(".bar").forEach(function(current) {
-      let startWidth = 0;
-      const endWidth = current.dataset.size;
-      const interval = setInterval(frame, 20);
+// function loading() {
+//     document.querySelectorAll(".bar").forEach(function(current) {
+//       let startWidth = 0;
+//       const endWidth = current.dataset.size;
+//       const interval = setInterval(frame, 20);
   
-      function frame() {
-        if (startWidth >= endWidth) {
-          clearInterval(interval);
-        } else {
-            startWidth++;
-            current.style.width = `${endWidth}%`;
-            current.firstElementChild.innerText = `${startWidth}%`;
-          }
-       }
-    });
-  }
-  setTimeout(loading, 1000);
+//       function frame() {
+//         if (startWidth >= endWidth) {
+//           clearInterval(interval);
+//         } else {
+//             startWidth++;
+//             current.style.width = `${endWidth}%`;
+//             current.firstElementChild.innerText = `${startWidth}%`;
+//           }
+//        }
+//     });
+//   }
+//   setTimeout(loading, 1000);
 
+let scrolled = false;
+
+const checkScroll = () => {
+  if (scrolled) return;
+  const elements = document.querySelectorAll(".bar");
+  if (elements.length === 0) {
+    console.error("Elements not found: .bar");
+    return;
+  }
+
+  elements.forEach(element => {
+    if (element.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight)) {
+      scrolled = true;
+      setTimeout(loadBars, 1000);
+    }
+  });
+};
+
+const loadBars = () => {
+  document.querySelectorAll(".bar").forEach(current => {
+    let startWidth = 0;
+    const endWidth = current.dataset.size;
+    const interval = setInterval(frame, 20);
+
+    function frame() {
+      if (startWidth >= endWidth) {
+        clearInterval(interval);
+      } else {
+        startWidth++;
+        current.style.width = `${startWidth}%`;
+        current.firstElementChild.innerText = `${startWidth}%`;
+      }
+    }
+  });
+};
+
+window.addEventListener("scroll", checkScroll);
+
+
+
+// function loading() {
+//   document.querySelectorAll(".bar").forEach(function(current) {
+//     let startWidth = 0;
+//     const endWidth = current.dataset.size;
+//     const interval = setInterval(frame, 20);
+
+//     function frame() {
+//       if (startWidth >= endWidth) {
+//         clearInterval(interval);
+//       } else {
+//         startWidth++;
+//         current.style.width = `${startWidth}%`;
+//         current.firstElementChild.innerText = `${startWidth}%`;
+//       }
+//     }
+//   });
+// }
+
+// let timeoutId;
+// let hasScrolled80px = false;
+
+// window.addEventListener('scroll', function() {
+//   if (window.scrollY >= 120 && !hasScrolled80px) {
+//     hasScrolled80px = true;
+//     timeoutId = setTimeout(loading, 1000);
+//   }
+// });
+
+
+
+
+  // let iss = false;
+  
+  // const caa = () => {
+  //   if (iss) return;
+  //   const ses = document.querySelector("#scrollanimes");
+  //   if (!ses) {
+  //       console.error("Element not found: #scrollanimes");
+  //       return;
+  //   }
+  
+  //   if (ses.getBoundingClientRect().top + 70 <= (window.innerHeight || document.documentElement.clientHeight)) {
+  //       setTimeout(loading, 1000);
+  //       iss = true;
+  //   }
+  // };
+  
+  // window.addEventListener("scroll", caa);
+
+  
+
+  
   // back to top JS
   const backToTopBtn = document.getElementById("backToTopBtn");
 
