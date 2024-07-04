@@ -128,13 +128,13 @@ let scrolled = false;
 
 const checkScroll = () => {
   if (scrolled) return;
-  const elements = document.querySelectorAll(".bar");
-  if (elements.length === 0) {
-    console.error("Elements not found: .bar");
+  const progressElements = document.querySelectorAll(".bar");
+  if (progressElements.length === 0) {
+    console.error("progressElements not found: .bar");
     return;
   }
 
-  elements.forEach(element => {
+  progressElements.forEach(element => {
     if (element.getBoundingClientRect().top <= (window.innerHeight || document.documentElement.clientHeight)) {
       scrolled = true;
       setTimeout(loadBars, 1000);
@@ -180,3 +180,50 @@ window.addEventListener("scroll", checkScroll);
     });
   });
 
+
+  // product tab JS
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+          const target = tab.getAttribute('data-tab');
+
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          contents.forEach(content => {
+              content.classList.remove('active');
+              content.style.display = 'none';
+              content.style.opacity = 0;
+          });
+
+          if (target) {
+              const activeContent = document.getElementById(target);
+              activeContent.style.display = 'block';
+              requestAnimationFrame(() => {
+                  activeContent.classList.add('active');
+                  activeContent.style.opacity = 1;
+              });
+          }
+
+          // Close the dropdown menu if a child element is clicked
+          if (dropdownMenu.contains(tab)) {
+              dropdownMenu.classList.remove('show');
+          }
+      });
+  });
+
+  dropdownToggle.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+  });
+
+  document.addEventListener('click', (e) => {
+      if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+      }
+  });
+});
