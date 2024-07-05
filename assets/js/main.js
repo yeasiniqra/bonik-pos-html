@@ -27,12 +27,12 @@ window.addEventListener('click', function(event) {
 // video popup JS
 document.getElementById('openPopupBtn').addEventListener('click', function() {
   document.getElementById('popup').style.display = 'block';
-  document.body.classList.add('hide-scroll')
+  document.body.classList.add('hide-scroll');
 });
 
 document.getElementById('closePopupBtn').addEventListener('click', function() {
   document.getElementById('popup').style.display = 'none';
-  document.body.classList.remove('hide-scroll')
+  document.body.classList.remove('hide-scroll');
 });
 
 // menu sticky js
