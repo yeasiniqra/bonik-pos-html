@@ -227,3 +227,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
+
+
+// Accordion JS
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(button => {
+  button.addEventListener('click', () => {
+    const currentlyActiveButton = document.querySelector('.accordion-header.active');
+
+    if (currentlyActiveButton && currentlyActiveButton !== button) {
+      currentlyActiveButton.classList.remove('active');
+      currentlyActiveButton.nextElementSibling.style.maxHeight = 0;
+      currentlyActiveButton.querySelector('.toggle-icon').textContent = '+';
+    }
+
+    button.classList.toggle('active');
+
+    const accordionContent = button.nextElementSibling;
+
+    if (button.classList.contains('active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+      button.querySelector('.toggle-icon').textContent = '-';
+    } else {
+      accordionContent.style.maxHeight = 0;
+      button.querySelector('.toggle-icon').textContent = '+';
+    }
+  });
+});
