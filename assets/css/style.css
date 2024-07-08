@@ -874,6 +874,9 @@ h3 {
 /************ Product Area Css *************/
    .our__product_area{
       overflow: hidden;
+   }
+
+   .bg{
       background: #ECECEC;
    }
    .tabs {
@@ -923,18 +926,20 @@ h3 {
    width: 100%;
    animation: fadeInOut 0.5s ease forwards;
  }
-
+ .dropdown-menu.show .tab {
+	padding: 11px 11px;
+}
 
  .dropdown-menu {
-   display: none;
-   position: absolute;
-   background-color: white;
-   z-index: 9;
-   right: 0;
-   top: 70px;
-   width: 200px;
-   box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
-   border-radius: 5px 5px 0px 0px;
+	display: none;
+	position: absolute;
+	background: rgba(255,255,255,0.5);
+	z-index: 9;
+	right: 0;
+	top: 70px;
+	width: 200px;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+	border-radius: 5px 5px 0px 0px;
 }
 
 .dropdown-menu.show{
@@ -1111,9 +1116,9 @@ h3 {
 }
 
  
- .accordion-header {
+.accordion-header {
 	width: 100%;
-	padding: 15px;
+	padding: 10px 15px;
 	text-align: left;
 	background-color: #f1f1f1;
 	border: none;
@@ -1126,7 +1131,7 @@ h3 {
 	font-family: var(--font-family-primary);
 	font-weight: 700;
 	color: #000;
-	font-size: 22px;
+	font-size: 20px;
 }
  
  /* .accordion-header:hover,
@@ -1156,6 +1161,141 @@ h3 {
    text-align: center;
    width: 100%;
  }
+
+/************ testimonials Area Css *************/
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials .testimonial-item {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  min-height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          position: relative;
+}
+.testimonials .user-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  height: 100%;
+  border-radius: 10px;
+  width: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonials .testimonial-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 5px 45px;
+  color: var(--secoundery-text-color);
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: var(--primary-text-color);
+  margin: 0 0 0 45px;
+}
+
+.testimonials .testimonial-content {
+  width: 527px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  position: relative;
+  z-index: 9;
+  padding: 21px;
+  border: 1px solid #ddd;
+}
+
+.testimonials .testimonial-item p {
+   margin: 0 15px 0 15px;
+   padding: 20px;
+   background: rgba(255, 255, 255, 0.1);
+   position: relative;
+   border-radius: 6px;
+   color: var(--secoundery-text-color);
+   font-size: 17px;
+   text-align: justify;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background-color: #ddd;
+  border-radius: 15px;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--primary-text-color);
+  width: 45px;
+}
+.testimonials .testimonials-slider {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-center{
+   text-align: center;
+}
+.title-center h2{
+   width: 100%;
+}
+
+.swiper-wrapper .slick-dots li {
+   position: relative;
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   margin: 0 5px;
+   padding: 0;
+   cursor: pointer;
+   border-radius: 15px;
+}
+.swiper-wrapper .slick-dots li button {
+   font-size: 0;
+   line-height: 0;
+   display: block;
+   width: 15px;
+   height: 15px;
+   padding: 5px;
+   cursor: pointer;
+   color: transparent;
+   border: 0;
+   outline: 0;
+   background: #ddd;
+   border-radius: 50%;
+}
+
+.swiper-wrapper .slick-dots .slick-active{
+   width: 45px !important;
+   background: var(--primary-text-color);
+}
+
+.swiper-wrapper .slick-dots li.slick-active button{
+   background: transparent;
+}
 
 /************ Service Area Css *************/
 .services-area{
@@ -1236,11 +1376,13 @@ h3 {
 }
 .about-us-right .section-title h2 {
 	color: #fff;
-	width: 85%;
+	width: 100%;
 	padding-top: 6px;
+	font-size: 33px;
 }
 .about-us-right p {
 	padding: 25px 0px;
+   text-align: justify;
 }
 .about-us-right ul li > i {
 	color: var(--primary-text-color);
