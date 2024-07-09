@@ -930,16 +930,17 @@ h3 {
 	padding: 11px 11px;
 }
 
- .dropdown-menu {
-	display: none;
-	position: absolute;
-	background: rgba(255,255,255,0.5);
-	z-index: 9;
-	right: 0;
-	top: 70px;
-	width: 200px;
-	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
-	border-radius: 5px 5px 0px 0px;
+.dropdown-menu {
+   display: none;
+   position: absolute;
+   background: rgba(255,255,255,0.5);
+   z-index: 9;
+   right: 0;
+   top: 70px;
+   width: 200px;
+   box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+   border-radius: 5px 5px 0px 0px;
+   backdrop-filter: blur(1.5px);
 }
 
 .dropdown-menu.show{
