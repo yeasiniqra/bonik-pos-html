@@ -2,34 +2,6 @@ $(document).ready(function(){
     //aos js
     AOS.init();
 
-    // complete project slider JS
-	// $('.test_images').owlCarousel({
-	// 		loop:true,
-	// 		margin:true,
-	// 		nav:true,
-	// 		autoplay:true,
-	// 		autoplayTimeout:4500,
-	// 		dots:false,
-	// 		items:1,
-	// 			responsive:{
-	// 			0:{
-	// 				items:1
-	// 			},
-	// 			575:{
-	// 				items:1
-	// 			},
-	// 			767:{
-	// 				items:1
-	// 			},
-	// 			992:{
-	// 				items:1
-	// 			},
-	// 			1200:{
-	// 				items:1
-	// 			}
-	// 		}
-	// })
-
 	//slick slider js
 	var $customSlide = $(".custom-slide")
         .slick({
@@ -60,7 +32,7 @@ $(document).ready(function(){
         speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
-		autoplay: true,
+	    	autoplay: true,
         responsive: [
         {
           breakpoint: 1024,
@@ -84,7 +56,7 @@ $(document).ready(function(){
             slidesToShow: 1,
             slidesToScroll: 1
           }
-        }
+        },
 
         ]
       });

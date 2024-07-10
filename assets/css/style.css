@@ -185,7 +185,7 @@ p {
 	font-size: 35px;
 	margin-bottom: 0;
 	text-transform: capitalize;
-	margin-top: 18px;
+	/* margin-top: 18px; */
 	line-height: 1.2;
 	font-weight: 700;
    color: var(--secondary-text-color);
@@ -1162,6 +1162,11 @@ h3 {
    text-align: center;
    width: 100%;
  }
+ .faq__area .grid_2x {
+   align-items: self-start;
+ }
+
+
 
 /************ testimonials Area Css *************/
 .testimonials .testimonials-carousel,
@@ -1362,7 +1367,7 @@ h3 {
 }
 
 /************ About Area Css *************/
-.about-area{
+/* .about-area{
    position: relative;
    z-index: 2;
    background: url('../images/counter1.jpg') no-repeat scroll 0 0 / 100% 100%;
@@ -1402,10 +1407,10 @@ h3 {
 .about-us-right .common-btn.withOut-banner a {
 	padding: 16px 30px;
 	font-size: 16px;
-}
+} */
 
 /* achivement css */
-.achivement-main {
+/* .achivement-main {
 	padding-top: 70px;
 }
 .achivement-heading {
@@ -1468,7 +1473,126 @@ h3 {
 
 .about-us-right .btn-primary {
    margin-top: 30px;
+} */
+
+.about__area {
+   background: #000;
+   padding: 40px 0px;
 }
+
+.about__area .section-title h2{
+   color: #fff;
+}
+
+.about__area .section-title p{
+   color: var(--primary-text-color);
+}
+
+.about__content p{
+   /* color: #000; */
+   text-align: justify;
+}
+
+.about__main-content {
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	gap: 10px;
+	grid-template-columns: 5fr 7fr;
+}
+.about__main-content.grid_2x.about__row-reverse {
+	grid-template-columns: 7fr 5fr;
+}
+
+/* .about__image {
+	width: 250px;
+	margin: 0 auto;
+	border-right: 1px dashed #fff;
+	padding: 20px 60px;
+} */
+
+.about__image {
+	width: 320px;
+	margin: 0 auto;
+	border-right: 2px solid #fff;
+	padding: 10px 50px;
+}
+
+.about__image img {
+	width: 100%;
+}
+
+.mt-40{
+   margin-top: 40px;
+}
+
+.about__main-content.grid_2x.about__row-reverse {
+	border-top: none;
+}
+.about__main-content.grid_2x.about__row-reverse .about__image {
+	border-right: none;
+	border-left: 2px solid #fff;
+}
+
+/*=========== Copywrite area Css ===========*/
+
+.copywrite-content blockquote.ps-blockquote {
+   padding: 10px 30px;
+}
+
+blockquote.ps-blockquote {
+   display: flex;
+   align-items: center;
+}
+
+.copy-image img {
+   width: 135px;
+   height: auto;
+   position: relative;
+   left: -5px;
+}
+
+.copy-content {
+   padding-left: 15px;
+}
+
+
+blockquote.ps-blockquote .copy-content span {
+   font-size: 16px;
+   line-height: 1.5;
+   font-weight: 400;
+   text-align: justify;
+   display: block;
+}
+
+blockquote.ps-blockquote {
+   border-left: 5px solid var(--primary-text-color);
+   padding: 30px;
+   background: #fff;
+   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+blockquote.ps-blockquote span {
+   font-size: 25px;
+}
+
+/*.copywrite-content blockquote.ps-blockquote > span > b {
+   display: block;
+   padding-top: 10px;
+   font-size: 14px;
+   text-transform: uppercase;
+}*/
+
+blockquote.ps-blockquote span > b {
+   display: block;
+   text-transform: uppercase;
+   padding-top: 10px;
+   font-size: 14px;
+}
+
+blockquote.ps-blockquote .copy-content span > a {
+   text-decoration: underline;
+}
+
+
 
 /************ skills Area Css *************/
 .skills-area{
