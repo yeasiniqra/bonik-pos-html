@@ -60,6 +60,50 @@ $(document).ready(function(){
 
         ]
       });
+
+    //partner JS
+    // $('.slide-track').slick({
+    //   speed: 5000,
+    //   autoplay: true,
+    //   autoplaySpeed: 0,
+    //   centerMode: true,
+    //   cssEase: 'linear',
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   variableWidth: true,
+    //   infinite: true,
+    //   initialSlide: 1,
+    //   arrows: false,
+    //   buttons: false,
+    //   pauseOnHover: true,
+    // });  
+    $(document).ready(function(){
+      $('.slide-track').slick({
+        speed: 5000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        centerMode: true,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: true,
+        initialSlide: 1,
+        arrows: false,
+        buttons: false,
+        pauseOnHover: false // Set to false to handle hover manually
+      });
+    
+      $('.slide-track').on('mouseenter', function() {
+        $(this).slick('slickPause');
+      });
+    
+      $('.slide-track').on('mouseleave', function() {
+        $(this).slick('slickPlay');
+      });
+    });
+    
+    
 	
 });
 

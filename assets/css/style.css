@@ -1367,114 +1367,6 @@ h3 {
 }
 
 /************ About Area Css *************/
-/* .about-area{
-   position: relative;
-   z-index: 2;
-   background: url('../images/counter1.jpg') no-repeat scroll 0 0 / 100% 100%;
-   padding-top: 100px;
-   padding-bottom: 100px;
-   background-size: cover;
-   background-position: center center;
-}
-.about-us-left img {
-	width: 90%;
-	height: auto;
-}
-.about-us-right .section-title h2 {
-	color: #fff;
-	width: 100%;
-	padding-top: 6px;
-	font-size: 33px;
-}
-.about-us-right p {
-	padding: 25px 0px;
-   text-align: justify;
-}
-.about-us-right ul li > i {
-	color: var(--primary-text-color);
-   margin-right: 5px;
-   font-size: 16px;
-}
-.about-us-right ul li {
-	margin: 10px 0px;
-	color: #fff;
-	font-size: 15px;
-}
-
-.about-us-right .common-btn.withOut-banner {
-	padding-top: 40px;
-}
-.about-us-right .common-btn.withOut-banner a {
-	padding: 16px 30px;
-	font-size: 16px;
-} */
-
-/* achivement css */
-/* .achivement-main {
-	padding-top: 70px;
-}
-.achivement-heading {
-	text-align: center;
-}
-.achivement-heading h4 {
-	color: #fff;
-	font-size: 18px;
-	position: relative;
-	background: #030615;
-   z-index: 2;
-}
-.achivement-heading h4::before {
-	position: absolute;
-	content: "";
-	width: 386px;
-	height: 1px;
-	top: 12px;
-	left: 0;
-	background: #3A3E49;
-	z-index: -1;
-}
-.achivement-heading h4::after {
-	position: absolute;
-	content: "";
-	width: 386px;
-	height: 1px;
-	top: 12px;
-	right: 0;
-	background: #3A3E49;
-	z-index: -1;
-}
-
-.support-given-main-flex {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 30px;
-	padding-top: 60px;
-}
-.support-given-single-item {
-	text-align: center;
-}
-.support-given-single-item span {
-	color: #fff;
-	font-size: 20px;
-}
-.count-plus {
-	display: flex;
-	align-items: center;
-	margin-bottom: 12px;
-	justify-content: center;
-}
-.count-plus > span {
-	font-size: 30px;
-}
-.count-plus h4 {
-	color: #fff;
-	margin-left: 2px;
-}
-
-.about-us-right .btn-primary {
-   margin-top: 30px;
-} */
-
 .about__area {
    background: #000;
    padding: 40px 0px;
@@ -1503,12 +1395,6 @@ h3 {
 	grid-template-columns: 7fr 5fr;
 }
 
-/* .about__image {
-	width: 250px;
-	margin: 0 auto;
-	border-right: 1px dashed #fff;
-	padding: 20px 60px;
-} */
 
 .about__image {
 	width: 320px;
@@ -1574,12 +1460,6 @@ blockquote.ps-blockquote span {
    font-size: 25px;
 }
 
-/*.copywrite-content blockquote.ps-blockquote > span > b {
-   display: block;
-   padding-top: 10px;
-   font-size: 14px;
-   text-transform: uppercase;
-}*/
 
 blockquote.ps-blockquote span > b {
    display: block;
@@ -1593,6 +1473,24 @@ blockquote.ps-blockquote .copy-content span > a {
 }
 
 
+
+/************ Partner Area Css *************/
+.slider-main .slide-single {
+	width: 180px !important;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border: 1px solid #ddd;
+	text-align: center;
+	margin: 0 auto !important;
+	display: block !important;
+   cursor: pointer;
+}
+
+.slide-single img {
+	display: block;
+	margin: 0 auto;
+}
 
 /************ skills Area Css *************/
 .skills-area{
