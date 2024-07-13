@@ -91,7 +91,8 @@ $(document).ready(function(){
         initialSlide: 1,
         arrows: false,
         buttons: false,
-        pauseOnHover: false // Set to false to handle hover manually
+        pauseOnHover: false, // Set to false to handle hover manually
+     
       });
     
       $('.slide-track').on('mouseenter', function() {
@@ -103,6 +104,19 @@ $(document).ready(function(){
       });
     });
     
+
+
+    $('.slider').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 3000,
+      cssEase: 'linear',
+      variableWidth: true,
+      arrows: false
+  });
     
 	
 });
