@@ -497,6 +497,11 @@ h3 {
   color: #fff;
 }
 
+.menu-toggle img{
+   pointer-events: none;
+   width: 50px;
+ }
+ 
 
 /************ Banner Area Css *************/
 .banner-area{

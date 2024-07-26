@@ -162,6 +162,26 @@
     .header-area.sticky-menu .menu-toggle i{
         color: #000;
     }
+
+  
+    /* When the sticky menu is active */
+    .header-area.sticky-menu .isNormal {
+        display: none;
+    }
+
+    .header-area.sticky-menu .isSticky {
+        display: block;
+    }
+
+    /* When the sticky menu is not active */
+    .header-area .isNormal {
+        display: block;
+    }
+
+    .header-area .isSticky {
+        display: none;
+    }
+
       
 }
 
