@@ -182,7 +182,7 @@ window.addEventListener("scroll", checkScroll);
   });
 
 
-  // product tab JS
+// product tab JS
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.tab-content');
