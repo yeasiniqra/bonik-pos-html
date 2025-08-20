@@ -17,6 +17,7 @@ window.addEventListener('click', function(event) {
   }
 });
 
+
  //mobile menu dropdown JS
  for (var allHasChildren = document.querySelectorAll(".menu-item-has-children a"), x = 0; x < allHasChildren.length; x++)
   allHasChildren[x].onclick = function () {
@@ -45,6 +46,7 @@ var scrollpos = window.scrollY,
 // function remove_class_on_scroll() {
 //     header.classList.remove("sticky-menu");
 // }
+
 
 window.addEventListener('scroll', function() {
     scrollpos = window.scrollY;
@@ -161,6 +163,7 @@ const loadBars = () => {
   });
 };
 
+
 window.addEventListener("scroll", checkScroll);
   
   // back to top JS
@@ -254,5 +257,10 @@ accordionHeaders.forEach(button => {
       accordionContent.style.maxHeight = 0;
       button.querySelector('.toggle-icon').textContent = '+';
     }
+
   });
 });
+
+
+
+

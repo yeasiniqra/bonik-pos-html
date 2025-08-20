@@ -224,8 +224,8 @@ h3 {
 
 .btn-primary {
    display: inline-block;
-
 }
+
 .btn-primary a::after{
    position: absolute;
    content: "";
@@ -1841,6 +1841,9 @@ background: linear-gradient(to right, #0ABFBC, #FC354C);
 	margin-bottom: 15px;
 	text-align: center;
 }
+.features__item ul li > i {
+	margin-right: 5px;
+}
 
 
 
@@ -1858,6 +1861,12 @@ background: linear-gradient(to right, #0ABFBC, #FC354C);
 	padding: 10px;
 	color: #fff;
 	border-radius: 10px 10px 0px 0px;
+}
+
+.fetures__summery{
+   color: #000;
+   text-align: center; 
+   padding: 30px 0px;
 }
 
 
@@ -1884,6 +1893,7 @@ background: linear-gradient(to right, #0ABFBC, #FC354C);
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
+
 }
 #backToTopBtn span i {
 	font-size: 20px;
@@ -1982,7 +1992,7 @@ background: linear-gradient(to right, #0ABFBC, #FC354C);
 
 /* first marque css */
 
- body {
+ /* body {
    --space: 4rem;
 }
 
@@ -2038,7 +2048,7 @@ background: linear-gradient(to right, #0ABFBC, #FC354C);
    100% {
        transform: translateX(calc(-100% - var(--gap)));
    }
-}
+} */
 
 
 
