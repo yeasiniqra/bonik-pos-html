@@ -2086,3 +2086,107 @@ background: linear-gradient(to right, #0ABFBC, #FC354C);
 .reverse {
    border-top: 1px solid #ddd;
 }
+
+
+
+
+
+/* ===== Footer Base ===== */
+.footer {
+  background: #0b0f19;
+  color: #ccc;
+  padding: 60px 20px 20px;
+  font-family: var(--font-family-primary)
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+/* ===== Columns ===== */
+.footer-col h3 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* ===== Links ===== */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #00aaff;
+}
+
+/* ===== Social Media ===== */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 16px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00aaff;
+}
+
+/* ===== Button ===== */
+.footer-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #0078d4;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.footer-btn:hover {
+  background: #005fa3;
+}
+
+/* ===== Bottom Bar ===== */
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}

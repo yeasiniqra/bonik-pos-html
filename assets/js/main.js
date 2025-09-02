@@ -230,7 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
           dropdownMenu.classList.remove('show');
       }
   });
+
+ 
 });
+
 
 
 // Accordion JS
